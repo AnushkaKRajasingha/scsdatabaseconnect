@@ -1,5 +1,5 @@
 <?php
-namespace scs\db;
+namespace scs;
 use PDO;
 /**
  * the idea of this class is provide a interface for a mysql database.

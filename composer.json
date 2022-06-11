@@ -1,4 +1,8 @@
 {
+    "name": "scs/scsdatabaseconnect",
+    "description": "scs my sql db connect package",
+    "keywords": ["db", "mysql", "transaction"],
+    "type": "library",
 	"autoload":
 	{
 		"classmap": ["Database.php", "LayerDB.php"]

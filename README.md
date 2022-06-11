@@ -1,2 +1,2 @@
 # scsdatabaseconnect
-scsdatabaseconnect
+SCS DataBase Connect
