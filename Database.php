@@ -10,6 +10,8 @@ use Monolog\Logger;
  * @updated 2022-06-10
  */
 
+//changes:
+//      warnings are now active
 
 class Database{
     private $_dbh;
