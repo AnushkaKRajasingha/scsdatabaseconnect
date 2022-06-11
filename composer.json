@@ -1,10 +1,19 @@
 {
-    "name": "scs/scsdatabaseconnect",
-    "description": "scs my sql db connect package",
-    "keywords": ["db", "mysql", "transaction"],
-    "type": "library",
-	"autoload":
-	{
-		"classmap": ["Database.php", "LayerDB.php"]
-	}
+  "name": "scs/scsdatabaseconnect",
+  "description": "scs my sql db connect package",
+  "keywords": [
+    "db",
+    "mysql",
+    "transaction"
+  ],
+  "type": "library",
+  "autoload": {
+    "classmap": [
+      "Database.php",
+      "LayerDB.php"
+    ]
+  },
+  "require": {
+    "monolog/monolog": "2.0.*"
+  }
 }

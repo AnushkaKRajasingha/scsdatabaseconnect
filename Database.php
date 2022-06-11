@@ -1,6 +1,8 @@
 <?php
 namespace scs;
 use PDO;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
 /**
  * the idea of this class is provide a interface for a mysql database.
  * @author Anushka K R
@@ -8,14 +10,13 @@ use PDO;
  * @updated 2022-06-10
  */
 
-//changes:
-//      warnings are now active
 
 class Database{
     private $_dbh;
     private $_stmt;
     private $_queryCounter = 0;
     private $_errors;
+    private $logger;
 
   
   
@@ -33,6 +34,9 @@ class Database{
           
                     );
         try {
+            $this->logger = new Logger('Database');
+            $this->logger->pushHandler(new StreamHandler(__DIR__. '/logs/app.log', Logger::DEBUG));
+            $this->logger->info('Database class initialized');
             $this->_dbh = new PDO($dsn, $user, $pass, $options);
         }
         catch (PDOException $e) {
@@ -94,6 +98,7 @@ class Database{
 
     //#########################################################################################################################################
     public function execute(){
+        $this->logger->info('execute');
         $this->_queryCounter++;
       //echo "aqui";
         return $this->_stmt->execute();
