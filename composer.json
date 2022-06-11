@@ -1,0 +1,6 @@
+{
+	"autoload":
+	{
+		"classmap": ["Database.php", "LayerDB.php"]
+	}
+}
