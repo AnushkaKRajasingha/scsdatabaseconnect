@@ -1,6 +1,6 @@
 <?php
-namespace scs\db;
-use scs\db\Database;
+namespace scs;
+use scs\Database;
 
 /**
  * this classe implements a generic web service able to read a sql query and return an array or a json string.
